@@ -1,3 +1,5 @@
+// Arquivos .TSX => Componente => Funções que retornam HTML.
+
 function Home() {
   return (
     <>
