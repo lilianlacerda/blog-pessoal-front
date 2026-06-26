@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Cadastro() {
   return (
     <>
@@ -66,7 +68,7 @@ function Cadastro() {
               type="reset"
               className="rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2"
             >
-              Cancelar
+              <Link to="/">Cancelar</Link>
             </button>
             <button
               type="submit"

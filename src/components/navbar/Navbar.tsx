@@ -12,7 +12,8 @@ function Navbar() {
             Blog Pessoal
           </Link>
           <div className="flex gap-4">
-            Postagens Temas Cadastrar tema Perfil Sair
+            Postagens Temas Cadastrar tema Perfil
+            <Link to="/">Sair</Link>
           </div>
         </div>
       </div>
