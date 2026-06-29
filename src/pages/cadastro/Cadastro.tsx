@@ -5,7 +5,7 @@ import type Usuario from "../../models/Usuario";
 import { cadastrarUsuario } from "../../services/Service";
 
 function Cadastro() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hooks -> mesmo que link mas o usuário não precisa clicar em nada
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -26,7 +26,7 @@ function Cadastro() {
   }, [usuario]);
 
   function retornar() {
-    navigate("/login");
+    navigate("/");
   }
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
@@ -49,6 +49,7 @@ function Cadastro() {
       try {
         await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
         alert("Usuário cadastrado com sucesso!");
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         alert("Erro ao cadastrar o usuário!");
       }
@@ -95,7 +96,7 @@ function Cadastro() {
           <div className="flex flex-col w-full">
             <label htmlFor="usuario">Usuario</label>
             <input
-              type="text"
+              type="email"
               id="usuario"
               name="usuario"
               placeholder="Usuario"
